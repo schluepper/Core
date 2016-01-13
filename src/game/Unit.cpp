@@ -838,6 +838,8 @@ uint32 Unit::DealDamage(Unit* pVictim, uint32 damage, CleanDamage const* cleanDa
                 // used by eluna
                 ElunaDo(this)->OnPVPKill(player_tap, playerVictim);
             }
+
+            ElunaDo(this)->OnPlayerKilled(this, playerVictim);
         }
         else                                                // Killed creature
             JustKilledCreature((Creature*)pVictim, player_tap);
